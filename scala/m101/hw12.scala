@@ -2,7 +2,7 @@
 import com.mongodb.casbah.Imports._
 
 object hw12 extends App {
-  var dbHost = MongoConnection(/*host*/)
+  var mongo = MongoConnection(/*host*/)
   val coll = dbHost(/*db*/"m101")(/*collection*/"funnynumbers")
 
   val entries = coll.find()
@@ -17,7 +17,7 @@ object hw12 extends App {
     .flatMap(_.toList) // just an idiom to filter out None's and map from list of Some's to list of actual objects
     .filter(_ % 3 == 0) // filter out numbers which are not funny
     .sum // well.. just a sum
-  dbHost.close
+  mongo.close
   
   println("The answer to Homework One, Problem 2 is " + sum.asInstanceOf[Int])
 }
