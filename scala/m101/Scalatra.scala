@@ -5,4 +5,8 @@ class Scalatra extends LifeCycle {
 	override def init(context: ServletContext) {
 		context mount (new HelloWorldApp, "/")
 	}
+
+	override def destroy(context: ServletContext) {
+		Mongo.close
+	}
 }
