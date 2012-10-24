@@ -1,18 +1,14 @@
-# Author: Marcelo Lipienski
-
-require 'mongo'
+require '../lib/mongo_course'
 require 'sinatra'
 
-get '/hw1/:skip_entry' do
-  # connect to the db on standard port
-  connection = Mongo::Connection.new('localhost', 27017)
+before do
+  config = {:server => '127.0.0.1', :db => 'm101', :collection => 'funnynumbers'}
+  MongoCourse.connect(config)
+end
 
-  db = connection.db("m101")                  # attach to db
-  collection = db.collection("funnynumbers")  #specify the collection
-
-  doc = collection.find({}, sort: 'value', skip: params[:skip_entry].to_i).next
+get '/hw1/:skip' do
+  doc = MongoCourse.find({}, sort: 'value', skip: params[:skip].to_i).next
   response = doc['value'].to_i unless doc.nil?
   
   "#{response}" # outputs response to the browser
-  
 end

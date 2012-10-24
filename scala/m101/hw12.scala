@@ -1,35 +1,23 @@
 // @author: Victor Igbokwe
-import com.mongodb._
+import com.mongodb.casbah.Imports._
 
 object hw12 extends App {
-  val mongo = new Mongo
-  val db = mongo.getDB("m101") // create a connection to the database
-  // retrieve/create a reference to the "funnynumbers" collection.
-  val coll = db.getCollection("funnynumbers")
+  var mongo = MongoConnection(/*host*/)
+  val coll = dbHost(/*db*/"m101")(/*collection*/"funnynumbers")
 
-  /*
-   * A recursive function to make a sum of some of the values in the "funnynumbers" collection.
-   * This function is done this way to minimize/eliminate side-effects as Scala encourages.
-   */
-  def traverseCollection(cursor: DBCursor, accumulator: Double): Double = {
-    // a control statement: find out if there is more data to process.
-    if (!cursor.hasNext) accumulator
-    else {
-      // retrieve the next value.
-      val doc = cursor.next
-      // make sure the document has a value called "value".
-      if (doc.containsField("value")) {
-        // convert the retrieved value to a double.
-        val item = doc.get("value").asInstanceOf[Double]
-        traverseCollection(cursor, accumulator + (if (item % 3 == 0) item else 0))
-      } else traverseCollection(cursor, accumulator)
-    }
-  }
+  val entries = coll.find()
 
-  // retrieve the magic value by calling the recursive function
-  // with the result of calling find on the collection.
-  val magic = traverseCollection(coll.find(), 0)
-  // close the database.
+  // We shouldn't be afraid of filtering here. In fact, entries is an Iterator, and when we apply
+  // map or filter, it doesn't do filtering - instead it returns new Iterator, which decorates first one
+  // Data are read from DB only when we really do need them - i.e., if we call .foreach or, in our case, if we call .sum
+  // You can verify it by extracting variable below which has filtered numbers, closing dbHost and trying to execute numbers.sum
+  // It will throw an exception - as we have no data on a client yet, only a filtered and mapped iterator
+  val sum = entries
+    .map(_.getAs[Double]("value")) // Map cursor to list (hopefully lazy) of Option[Double], where None means record doesn't have value assigned
+    .flatMap(_.toList) // just an idiom to filter out None's and map from list of Some's to list of actual objects
+    .filter(_ % 3 == 0) // filter out numbers which are not funny
+    .sum // well.. just a sum
   mongo.close
-  println("The answer to Homework One, Problem 2 is " + magic.asInstanceOf[Int])
+  
+  println("The answer to Homework One, Problem 2 is " + sum.asInstanceOf[Int])
 }

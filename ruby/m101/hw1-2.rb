@@ -1,17 +1,12 @@
-# Author: Marcelo Lipienski
+require '../lib/mongo_course'
 
-require 'mongo'
-
-# connect to the db on standard port
-connection = Mongo::Connection.new('localhost', 27017)
-
-db = connection.db("m101")                  # attach to db
-collection = db.collection("funnynumbers")  #specify the collection
+config = {:server => '127.0.0.1', :db => 'm101', :collection => 'funnynumbers'}
+MongoCourse.connect(config)
 
 magic = 0
 
 begin
-  collection.find.each do |item|
+  MongoCourse.find.each do |item|
     if (item['value'] % 3) == 0
       magic = magic + item['value']
     end
