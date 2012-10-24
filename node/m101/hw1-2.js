@@ -1,7 +1,7 @@
 var mongodb = require('mongodb');
 var _ = require('underscore');
 
-var db = mongodb.Db('m101', new mongodb.Server('localhost', 27017, {safe: true}));
+var db = mongodb.Db('m101', new mongodb.Server('localhost', 27017), {safe: true});
 
 db.open(function(err, conn) {
 	if(err) {
