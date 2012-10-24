@@ -9,20 +9,9 @@ get '/hw1/:skip_entry' do
 
   db = connection.db("m101")                  # attach to db
   collection = db.collection("funnynumbers")  #specify the collection
-  
-  skip_count = 0
-  response = nil
-  
-  collection.find().sort(:value).each do |entry|
- 
-    if skip_count < params[:skip_entry].to_i
-      skip_count = skip_count + 1
-    else
-      response = entry['value'].to_i
-      break
-    end
-    
-  end
+
+  doc = collection.find({}, sort: 'value', skip: params[:skip_entry].to_i).next
+  response = doc['value'].to_i unless doc.nil?
   
   "#{response}" # outputs response to the browser
   
