@@ -26,7 +26,7 @@ db.open(function(err, conn) {
 					}
 				});
 				console.log('The answer to Homework One, Problem 2 is ' + magic);
-				process.exit(0);
+				conn.close();
 			});
 		});
 	});
