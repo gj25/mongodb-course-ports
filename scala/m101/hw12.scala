@@ -3,7 +3,7 @@ import com.mongodb.casbah.Imports._
 
 object hw12 extends App {
   var mongo = MongoConnection(/*host*/)
-  val coll = dbHost(/*db*/"m101")(/*collection*/"funnynumbers")
+  val coll = mongo(/*db*/"m101")(/*collection*/"funnynumbers")
 
   val entries = coll.find()
 
