@@ -1,8 +1,7 @@
 ## Setup
 
 ```
-gem install mongo
-gem install sinatra
+bundle install
 ```
 
 ## Running
