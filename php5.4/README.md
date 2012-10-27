@@ -14,6 +14,6 @@ $ cd 'your_course_dir'
 $ php -S localhost:8080 router.php
 
 When call from other console window
-$ curl http://localhost:8088/hw1/50
+$ curl http://localhost:8080/hw1/50
 
 If you prefer to use apache or nginx (or else) web server, you must setup routes for it
