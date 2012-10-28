@@ -42,6 +42,4 @@ func main() {
     }
 
     fmt.Println("The answer to Homework One, Problem 2 is", magic)
-
-    err = err
 }
