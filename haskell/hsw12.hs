@@ -2,6 +2,7 @@
 module Main where
 
 import Database.MongoDB
+import qualified Database.MongoDB as M
 import Control.Monad.Trans (liftIO)
 
 main = do
@@ -16,6 +17,8 @@ run = do
     allTeams >>= printDocs "All Teams"
     nationalLeagueTeams >>= printDocs "National League Teams"
     newYorkTeams >>= printDocs "New York Teams"
+
+
 
 clearTeams = delete (select [] "team")
 
@@ -32,3 +35,7 @@ nationalLeagueTeams = rest =<< find (select ["league" =: "National"] "team")
 newYorkTeams = rest =<< find (select ["home.state" =: "NY"] "team") {project = ["name" =: 1, "league" =: 1]}
 
 printDocs title docs = liftIO $ putStrLn title >> mapM_ (print . exclude ["_id"]) docs
+
+sumN :: [Document] -> Int
+sumN d = sum . (filter isMod3) $ d >>= M.lookup "number"
+  where isMod3 x = x `mod` 3 == 0
