@@ -10,12 +10,14 @@ main = do
     pipe <- runIOE $ connect (host "127.0.0.1")
     e1 <- access pipe master "m101" runDocs
     close pipe
-    print e1
+    case e1 of
+      Left s  -> fail $ show s
+      Right i -> print $ "The answer to Homework One, Problem 2 is " ++ show i
 
 runDocs :: Action IO Int
 runDocs = do
   docs <- find (select [] "funnynumbers")
-  sumValues `liftM` rest docs
+  rest docs >>= (\x -> return $ sumValues x)
 
 sumValues :: [Document] -> Int
 sumValues d = sum . (filter isMod3) $ d >>= M.lookup "value"
