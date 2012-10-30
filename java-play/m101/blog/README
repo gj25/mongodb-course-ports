@@ -1,6 +1,6 @@
 Mongodb for Developers course homework project
 ================================================
-Need Play 2.0.4+
+Need Play Framework 2.0.4+
 
 to build:
 > play compile
