@@ -1,10 +1,22 @@
-package com.example.app
+
 import org.scalatra._
+import com.mongodb.casbah.Imports._
 
 class HelloWorldApp extends ScalatraFilter {
-  get("/") {
-    <h1>Hello, {params("name")}</h1>
+  get("/hw1/:skip") {
+  	val skip = params("skip").toInt 
+
+  	val record = Mongo("m101", "funnynumbers").find()
+  		.skip(skip)
+  		.sort(MongoDBObject("value" -> true))
+  		.next
+    record.getAs[Double]("value").get
   }
 }
 
-
+object Mongo {
+	lazy val mongo = MongoConnection()
+	def apply(db: String) = mongo(db)
+	def apply(db: String, collection: String) = mongo(db)(collection)
+	def close = mongo.close
+}
