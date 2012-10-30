@@ -1,4 +1,16 @@
-This is your new Play 2.0 application
-=====================================
+Mongodb for Developers course homework project
+================================================
+Need Play 2.0.4+
 
-This file will be packaged with your application, when using `play dist`.
+to build:
+> play compile
+
+to run:
+> play run
+
+to package:
+> play dist
+
+to generate eclipse project files:
+> play eclipsify
+
