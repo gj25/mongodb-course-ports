@@ -12,12 +12,12 @@ main = do
     close pipe
     case e1 of
       Left s  -> fail $ show s
-      Right i -> print $ "The answer to Homework One, Problem 2 is " ++ show i
+      Right i -> putStrLn $ "The answer to Homework One, Problem 2 is " ++ show i
 
 runDocs :: Action IO Int
 runDocs = do
   docs <- find (select [] "funnynumbers")
-  rest docs >>= (\x -> return $ sumValues x)
+  sumValues `liftM` (rest docs)
 
 sumValues :: [Document] -> Int
 sumValues d = sum . (filter isMod3) $ d >>= M.lookup "value"
