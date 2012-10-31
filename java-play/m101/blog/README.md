@@ -2,24 +2,21 @@
 Need [Play Framework](http://www.playframework.org/) 2.0.4+
 
 #### build
-
 ---
-> play compile
+play compile
 ---
 
 #### run
-
 ---
-> play run
+play run
 ---
 
 #### package
-
 ---
-> play dist
+play dist
 ---
 
 #### generate eclipse project files
 ---
-> play eclipsify
+play eclipsify
 ---
