@@ -18,5 +18,5 @@ Need [Play Framework](http://www.playframework.org/) 2.0.4+
 
 ### generate eclipse project files
 ```
-play eclipsify
+> play eclipsify
 ```
