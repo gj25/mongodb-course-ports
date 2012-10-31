@@ -1,16 +1,22 @@
-Mongodb for Developers course homework project
-================================================
-Need Play Framework 2.0.4+
+## Mongodb for Developers homework project ##
+Need [Play Framework](http://www.playframework.org/) 2.0.4+
 
-to build:
+* build
+---
 > play compile
+---
 
-to run:
+* run
+---
 > play run
+---
 
-to package:
+* package
+---
 > play dist
+---
 
-to generate eclipse project files:
+* generate eclipse project files
+---
 > play eclipsify
-
+---
