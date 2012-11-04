@@ -1,8 +1,5 @@
 package models;
 
-/*
- * Copyright (C) 2009 Ventyx Software SRL.  All rights reserved.
- */
 import com.mongodb.DBCollection;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
