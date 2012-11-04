@@ -4,3 +4,5 @@
 target
 nbproject
 build.xml
+logs
+build

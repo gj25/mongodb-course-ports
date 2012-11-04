@@ -11,7 +11,7 @@ public class Global extends GlobalSettings
   public void onStart(Application app) 
   {
     MongoDB.connect();
-    Logger.info("Connected to MongoDB dellr2970g:27520");
+    Logger.info("Connected to MongoDB");
   }  
   
   @Override
