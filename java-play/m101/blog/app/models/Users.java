@@ -26,8 +26,6 @@ public class Users {
         if (salt == null) {
             salt = makeSalt();
         }
-        
-        Logger.debug("password: " + pw + " salt: " + salt);
 
         try {
             MessageDigest sha = MessageDigest.getInstance("SHA-256");
@@ -39,7 +37,6 @@ public class Users {
     	    for (int i=0;i<digest.length;i++) {
     	       hexString.append(Integer.toHexString(0xFF & digest[i]));
     	    }
-            Logger.debug("hex: " + hexString);
             return hexString + "," + salt;
         }
         catch (NoSuchAlgorithmException ex) {
@@ -92,13 +89,9 @@ public class Users {
             return false;
         }
 
-        String pwdField = (String) user.get("password");
-        Logger.debug("pwdField: " + pwdField);
-        
+        String pwdField = (String) user.get("password");      
         String salt = pwdField.split(",")[1];
-        Logger.debug("validateLogin. password: " + password + " salt: " + salt);
         String newPsdHash = makePwHash(password, salt);
-        Logger.debug("newPsdHash: "+ newPsdHash);
         if (!pwdField.equals(newPsdHash)) {
             Logger.info("user password is not a match");
             return false;
@@ -124,12 +117,8 @@ public class Users {
 
     // returns username associated with the session
     public String getSession(String sessionId) {
-        Logger.debug("getSession.sessionId" + sessionId);
-        
         DBObject idObj = new BasicDBObject("_id", new ObjectId(sessionId));
         DBObject session = MongoDB.getCollection("sessions").findOne(idObj);
-        
-        Logger.debug("retrieved session: " + session.toString());
 
         return (session != null) ? (String) session.get("username") : null;
     }
@@ -183,7 +172,6 @@ public class Users {
     public String checkSecureVal(String h)
     {
         String val = h.split("\\|")[0];
-        Logger.debug("val= " + val);
         
         if (h.equals(makeSecureVal(val)))
         {

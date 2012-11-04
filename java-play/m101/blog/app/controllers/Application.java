@@ -54,7 +54,6 @@ public class Application extends Controller {
             }
             users.endSession(sessionId);
 
-            Logger.debug("clearing the cookie...");
             response().setCookie("session", "");
             return redirect("/signup");
         }
@@ -79,10 +78,7 @@ public class Application extends Controller {
             }
 
             String sessionId = users.startSession(username);
-            Logger.debug("SessionId: " + sessionId);
-            
             String cookie = users.makeSecureVal(sessionId);
-            Logger.debug("Setting cookie: " + cookie);
             response().setCookie("session", cookie);
             
             return redirect("/welcome");
@@ -122,10 +118,8 @@ public class Application extends Controller {
 
     public static Result presentWelcome() {
         String cookie = request().cookies().get("session").value();
-        Logger.debug("Cookie: " + cookie);
         
         String username = checkLogin(cookie);
-        Logger.debug("username: " + username);
         if (username == null)
         {
             Logger.info("welcome: can't identify user...redirecting to signup");

@@ -1,681 +1,114 @@
-2012-11-04 07:57:28,533 - [INFO] - from play in main 
-Listening for HTTP on port 9000...
+2012-11-04 12:07:00,723 - [INFO] - from play in main 
+Listening for HTTP on port 8082...
 
-2012-11-04 07:57:57,566 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
+2012-11-04 12:50:32,992 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
 Connecting to mongo db...
 
-2012-11-04 07:57:57,991 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
+2012-11-04 12:50:33,312 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
 Connected to MongoDB dellr2970g:27520
 
-2012-11-04 07:57:57,994 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
+2012-11-04 12:50:33,322 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 Application started (Dev)
 
-2012-11-04 07:58:34,042 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-User did not validate
+2012-11-04 12:50:33,663 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+password: JhVMKUbT salt: FTXaQ
 
-2012-11-04 07:58:45,905 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-User did not validate
+2012-11-04 12:50:33,663 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+hex: 4268cd1b66509fc922c34f847bcbd8396b4110fa358cb589a4c33546a53d6a6
 
-2012-11-04 07:59:00,637 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-User did not validate
+2012-11-04 12:50:33,693 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+Created new user: gjguHwD
 
-2012-11-04 07:59:08,682 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-User did not validate
+2012-11-04 12:50:33,693 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+Created new session for user: gjguHwD
 
-2012-11-04 07:59:48,144 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
+2012-11-04 12:50:33,693 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+SessionId: 5096d51992b2cd134b632cd8
+
+2012-11-04 12:50:33,832 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+Setting cookie: 5096d51992b2cd134b632cd8|Mhpqj1itD8K4Z6CjGP2w0LQ/xuc=
+
+2012-11-04 12:50:36,937 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+Cookie: 5096d51992b2cd134b632cd8|Mhpqj1itD8K4Z6CjGP2w0LQ/xuc=
+
+2012-11-04 12:50:36,937 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+val= 5096d51992b2cd134b632cd8
+
+2012-11-04 12:50:36,938 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+getSession.sessionId5096d51992b2cd134b632cd8
+
+2012-11-04 12:50:36,954 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+retrieved session: { "_id" : { "$oid" : "5096d51992b2cd134b632cd8"} , "username" : "gjguHwD"}
+
+2012-11-04 12:50:36,954 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+username: gjguHwD
+
+2012-11-04 12:50:40,063 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+pwdField: 4268cd1b66509fc922c34f847bcbd8396b4110fa358cb589a4c33546a53d6a6,FTXaQ
+
+2012-11-04 12:50:40,063 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+validateLogin. password: JhVMKUbT salt: FTXaQ
+
+2012-11-04 12:50:40,073 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+password: JhVMKUbT salt: FTXaQ
+
+2012-11-04 12:50:40,074 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+hex: 4268cd1b66509fc922c34f847bcbd8396b4110fa358cb589a4c33546a53d6a6
+
+2012-11-04 12:50:40,074 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+newPsdHash: 4268cd1b66509fc922c34f847bcbd8396b4110fa358cb589a4c33546a53d6a6,FTXaQ
+
+2012-11-04 12:50:40,076 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+Created new session for user: gjguHwD
+
+2012-11-04 12:50:43,150 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+Cookie: 5096d52092b2cd134b632cd9|nAc9r1cMpDLHuIo+nJmK9Kg24Rw=
+
+2012-11-04 12:50:43,150 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+val= 5096d52092b2cd134b632cd9
+
+2012-11-04 12:50:43,151 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+getSession.sessionId5096d52092b2cd134b632cd9
+
+2012-11-04 12:50:43,153 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+retrieved session: { "_id" : { "$oid" : "5096d52092b2cd134b632cd9"} , "username" : "gjguHwD"}
+
+2012-11-04 12:50:43,153 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-6 
+username: gjguHwD
+
+2012-11-04 13:08:02,920 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+Application shutdown...
+
+2012-11-04 13:08:02,930 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+Connecting to mongo db...
+
+2012-11-04 13:08:02,931 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+Connected to MongoDB dellr2970g:27520
+
+2012-11-04 13:08:02,931 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
+Application started (Dev)
+
+2012-11-04 13:08:21,202 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
 Created new user: goran
 
-2012-11-04 07:59:48,149 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
+2012-11-04 13:08:21,203 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
 Created new session for user: goran
 
-2012-11-04 07:59:48,169 - [ERROR] - from application in play-akka.actor.actions-dispatcher-7 
+2012-11-04 13:08:28,841 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+ended session : 5096d94592b2cd134b632cda
 
-
-! @6c8j7f0og - Internal server error, for request [POST /signup] ->
-
-play.core.ActionInvoker$$anonfun$receive$1$$anon$1: Execution exception [[NullPointerException: null]]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:134) [play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:115) [play_2.9.1.jar:2.0.4]
-	at akka.actor.Actor$class.apply(Actor.scala:318) [akka-actor.jar:2.0.2]
-	at play.core.ActionInvoker.apply(Invoker.scala:113) [play_2.9.1.jar:2.0.4]
-	at akka.actor.ActorCell.invoke(ActorCell.scala:626) [akka-actor.jar:2.0.2]
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:197) [akka-actor.jar:2.0.2]
-	at akka.dispatch.Mailbox.run(Mailbox.scala:179) [akka-actor.jar:2.0.2]
-	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:516) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1479) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0.2]
-Caused by: java.lang.NullPointerException: null
-	at models.Users.startSession(Users.java:101) ~[classes/:na]
-	at controllers.Application.processSignup(Application.java:81) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$apply$11$$anonfun$apply$12.apply(routes_routing.scala:92) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$apply$11$$anonfun$apply$12.apply(routes_routing.scala:92) ~[classes/:na]
-	at play.core.Router$HandlerInvoker$$anon$5$$anon$1.invocation(Router.scala:1090) ~[play_2.9.1.jar:2.0.4]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) ~[play_2.9.1.jar:2.0.4]
-	at play.GlobalSettings$1.call(GlobalSettings.java:57) ~[play_2.9.1.jar:2.0.4]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) ~[play_2.9.1.jar:2.0.4]
-	at play.core.Router$HandlerInvoker$$anon$5$$anon$1.apply(Router.scala:1089) ~[play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$6.apply(Invoker.scala:126) ~[play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$6.apply(Invoker.scala:126) ~[play_2.9.1.jar:2.0.4]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) ~[play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:125) [play_2.9.1.jar:2.0.4]
-	... 11 common frames omitted
-
-2012-11-04 07:59:48,171 - [ERROR] - from application in play-akka.actor.actions-dispatcher-7 
-Internal Server Error
-play.core.ActionInvoker$$anonfun$receive$1$$anon$1: Execution exception [[NullPointerException: null]]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:134) [play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:115) [play_2.9.1.jar:2.0.4]
-	at akka.actor.Actor$class.apply(Actor.scala:318) [akka-actor.jar:2.0.2]
-	at play.core.ActionInvoker.apply(Invoker.scala:113) [play_2.9.1.jar:2.0.4]
-	at akka.actor.ActorCell.invoke(ActorCell.scala:626) [akka-actor.jar:2.0.2]
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:197) [akka-actor.jar:2.0.2]
-	at akka.dispatch.Mailbox.run(Mailbox.scala:179) [akka-actor.jar:2.0.2]
-	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:516) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1479) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0.2]
-Caused by: java.lang.NullPointerException: null
-	at models.Users.startSession(Users.java:101) ~[classes/:na]
-	at controllers.Application.processSignup(Application.java:81) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$apply$11$$anonfun$apply$12.apply(routes_routing.scala:92) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$apply$11$$anonfun$apply$12.apply(routes_routing.scala:92) ~[classes/:na]
-	at play.core.Router$HandlerInvoker$$anon$5$$anon$1.invocation(Router.scala:1090) ~[play_2.9.1.jar:2.0.4]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) ~[play_2.9.1.jar:2.0.4]
-	at play.GlobalSettings$1.call(GlobalSettings.java:57) ~[play_2.9.1.jar:2.0.4]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) ~[play_2.9.1.jar:2.0.4]
-	at play.core.Router$HandlerInvoker$$anon$5$$anon$1.apply(Router.scala:1089) ~[play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$6.apply(Invoker.scala:126) ~[play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$6.apply(Invoker.scala:126) ~[play_2.9.1.jar:2.0.4]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) ~[play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:125) [play_2.9.1.jar:2.0.4]
-	... 11 common frames omitted
-
-2012-11-04 08:10:22,389 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:10:22,400 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:10:22,401 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:10:22,401 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:10:22,427 - [ERROR] - from application in play-akka.actor.actions-dispatcher-7 
-Failed to create new user: goran
-com.mongodb.MongoException$DuplicateKey: E11000 duplicate key error index: blog.users.$_id_  dup key: { : "goran" }
-	at com.mongodb.CommandResult.getException(CommandResult.java:98) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.CommandResult.throwOnError(CommandResult.java:134) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.DBTCPConnector._checkWriteError(DBTCPConnector.java:142) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:183) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.DBTCPConnector.say(DBTCPConnector.java:155) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.DBApiLayer$MyCollection.insert(DBApiLayer.java:249) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.DBApiLayer$MyCollection.insert(DBApiLayer.java:205) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.DBCollection.insert(DBCollection.java:57) ~[mongo-2.9.2.jar:na]
-	at com.mongodb.DBCollection.insert(DBCollection.java:86) ~[mongo-2.9.2.jar:na]
-	at models.Users.newUser(Users.java:130) ~[classes/:na]
-	at controllers.Application.processSignup(Application.java:76) [classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$apply$11$$anonfun$apply$12.apply(routes_routing.scala:92) [classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$apply$11$$anonfun$apply$12.apply(routes_routing.scala:92) [classes/:na]
-	at play.core.Router$HandlerInvoker$$anon$5$$anon$1.invocation(Router.scala:1090) [play_2.9.1.jar:2.0.4]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) [play_2.9.1.jar:2.0.4]
-	at play.GlobalSettings$1.call(GlobalSettings.java:57) [play_2.9.1.jar:2.0.4]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) [play_2.9.1.jar:2.0.4]
-	at play.core.Router$HandlerInvoker$$anon$5$$anon$1.apply(Router.scala:1089) [play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$6.apply(Invoker.scala:126) [play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$6.apply(Invoker.scala:126) [play_2.9.1.jar:2.0.4]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) [play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:125) [play_2.9.1.jar:2.0.4]
-	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:115) [play_2.9.1.jar:2.0.4]
-	at akka.actor.Actor$class.apply(Actor.scala:318) [akka-actor.jar:2.0.2]
-	at play.core.ActionInvoker.apply(Invoker.scala:113) [play_2.9.1.jar:2.0.4]
-	at akka.actor.ActorCell.invoke(ActorCell.scala:626) [akka-actor.jar:2.0.2]
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:197) [akka-actor.jar:2.0.2]
-	at akka.dispatch.Mailbox.run(Mailbox.scala:179) [akka-actor.jar:2.0.2]
-	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:516) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1479) [akka-actor.jar:2.0.2]
-	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0.2]
-
-2012-11-04 08:10:36,640 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:10:50,293 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:12:08,927 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:12:08,937 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:12:08,938 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:12:08,938 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:12:08,953 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:12:18,605 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:12:25,652 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:12:57,139 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: goran1
-
-2012-11-04 08:12:57,140 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: goran1
-
-2012-11-04 08:12:57,368 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-no secure session id
-
-2012-11-04 08:12:57,369 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-welcome: can't identify user...redirecting to signup
-
-2012-11-04 08:20:35,372 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:20:35,384 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:20:35,385 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:20:35,385 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:20:35,402 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: goran2
-
-2012-11-04 08:20:35,403 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: goran2
-
-2012-11-04 08:20:35,404 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 509695d392b23f985dd44ae6|6qkBlaa3Djg91Q6ArDgjWHG178U=
-
-2012-11-04 08:20:35,419 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 509695d392b23f985dd44ae6|6qkBlaa3Djg91Q6ArDgjWHG178U=
-
-2012-11-04 08:20:35,419 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 
-
-2012-11-04 08:20:35,419 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-no secure session id
-
-2012-11-04 08:20:35,420 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-welcome: can't identify user...redirecting to signup
-
-2012-11-04 08:31:17,466 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:31:17,478 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:31:17,479 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:31:17,479 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:32:24,291 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: goran
-
-2012-11-04 08:32:24,295 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
+2012-11-04 13:08:36,939 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
 Created new session for user: goran
 
-2012-11-04 08:32:24,296 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-SessionId: 5096989892b23f985dd44ae7
+2012-11-04 13:08:42,245 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+ended session : 5096d95492b2cd134b632cdb
 
-2012-11-04 08:32:24,298 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 5096989892b23f985dd44ae7|L/9FkAbk5VZS8qKglfYHqmWwqDc=
+2012-11-04 13:08:49,329 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+Created new user: RQiIzpF
 
-2012-11-04 08:32:24,346 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 5096989892b23f985dd44ae7|L/9FkAbk5VZS8qKglfYHqmWwqDc=
+2012-11-04 13:08:49,330 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+Created new session for user: RQiIzpF
 
-2012-11-04 08:32:24,347 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 5096989892b23f985dd44ae7
-
-2012-11-04 08:32:24,350 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-welcome: can't identify user...redirecting to signup
-
-2012-11-04 08:35:23,421 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:35:23,431 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:35:23,432 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:35:23,433 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:35:23,449 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 5096989892b23f985dd44ae7
-
-2012-11-04 08:35:23,452 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-ended session : 5096989892b23f985dd44ae7
-
-2012-11-04 08:35:23,452 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-clearing the cookie...
-
-2012-11-04 08:37:32,365 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:37:32,400 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:37:32,401 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:37:32,401 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:37:46,310 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: goran
-
-2012-11-04 08:37:46,311 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: goran
-
-2012-11-04 08:37:46,312 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-SessionId: 509699da92b23f985dd44ae8
-
-2012-11-04 08:37:46,313 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 509699da92b23f985dd44ae8|nZ/6A5kI8IwfWwGWmQeqVRjmsh0=
-
-2012-11-04 08:37:46,354 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 509699da92b23f985dd44ae8|nZ/6A5kI8IwfWwGWmQeqVRjmsh0=
-
-2012-11-04 08:37:46,355 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 509699da92b23f985dd44ae8
-
-2012-11-04 08:37:46,355 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-getSession.sessionId509699da92b23f985dd44ae8
-
-2012-11-04 08:37:46,365 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-retrieved session: { "_id" : { "$oid" : "509699da92b23f985dd44ae8"} , "session" : "goran"}
-
-2012-11-04 08:37:46,365 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-welcome: can't identify user...redirecting to signup
-
-2012-11-04 08:40:53,696 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:40:53,705 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:40:53,706 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:40:53,706 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:41:01,488 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: mama
-
-2012-11-04 08:41:01,490 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: mama
-
-2012-11-04 08:41:01,490 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-SessionId: 50969a9d92b23f985dd44ae9
-
-2012-11-04 08:41:01,491 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 50969a9d92b23f985dd44ae9|ZuMYid2c+ewhcRlkxjC2CT1iqXg=
-
-2012-11-04 08:41:01,536 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 50969a9d92b23f985dd44ae9|ZuMYid2c+ewhcRlkxjC2CT1iqXg=
-
-2012-11-04 08:41:01,536 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969a9d92b23f985dd44ae9
-
-2012-11-04 08:41:01,537 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-getSession.sessionId50969a9d92b23f985dd44ae9
-
-2012-11-04 08:41:01,538 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-retrieved session: { "_id" : { "$oid" : "50969a9d92b23f985dd44ae9"} , "session" : "mama"}
-
-2012-11-04 08:41:01,538 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-username: null
-
-2012-11-04 08:41:01,538 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-welcome: can't identify user...redirecting to signup
-
-2012-11-04 08:43:49,524 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:43:49,533 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:43:49,534 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:43:49,535 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:43:49,546 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969a9d92b23f985dd44ae9
-
-2012-11-04 08:43:52,552 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-ended session : 50969a9d92b23f985dd44ae9
-
-2012-11-04 08:43:52,553 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-clearing the cookie...
-
-2012-11-04 08:44:38,451 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-User did not validate
-
-2012-11-04 08:44:48,130 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-User did not validate
-
-2012-11-04 08:44:58,470 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: goran
-
-2012-11-04 08:44:58,471 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: goran
-
-2012-11-04 08:44:58,472 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-SessionId: 50969b8a92b23f985dd44aea
-
-2012-11-04 08:44:58,473 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 50969b8a92b23f985dd44aea|QuUn42BrRx+/lMm/VZCsKxH63S8=
-
-2012-11-04 08:44:58,518 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 50969b8a92b23f985dd44aea|QuUn42BrRx+/lMm/VZCsKxH63S8=
-
-2012-11-04 08:44:58,518 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969b8a92b23f985dd44aea
-
-2012-11-04 08:44:58,519 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-getSession.sessionId50969b8a92b23f985dd44aea
-
-2012-11-04 08:44:58,520 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-retrieved session: { "_id" : { "$oid" : "50969b8a92b23f985dd44aea"} , "username" : "goran"}
-
-2012-11-04 08:44:58,521 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-username: goran
-
-2012-11-04 08:45:18,042 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969b8a92b23f985dd44aea
-
-2012-11-04 08:45:18,044 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-ended session : 50969b8a92b23f985dd44aea
-
-2012-11-04 08:45:18,045 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-clearing the cookie...
-
-2012-11-04 08:45:28,335 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:45:33,150 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:45:59,845 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: aaa
-
-2012-11-04 08:45:59,846 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: aaa
-
-2012-11-04 08:45:59,847 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-SessionId: 50969bc792b23f985dd44aeb
-
-2012-11-04 08:45:59,848 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 50969bc792b23f985dd44aeb|L/y/6DhSEk9vg6a4mmH7AtfFipQ=
-
-2012-11-04 08:45:59,888 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 50969bc792b23f985dd44aeb|L/y/6DhSEk9vg6a4mmH7AtfFipQ=
-
-2012-11-04 08:45:59,889 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969bc792b23f985dd44aeb
-
-2012-11-04 08:45:59,890 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-getSession.sessionId50969bc792b23f985dd44aeb
-
-2012-11-04 08:45:59,891 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-retrieved session: { "_id" : { "$oid" : "50969bc792b23f985dd44aeb"} , "username" : "aaa"}
-
-2012-11-04 08:45:59,891 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-username: aaa
-
-2012-11-04 08:46:05,045 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969bc792b23f985dd44aeb
-
-2012-11-04 08:46:05,047 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-ended session : 50969bc792b23f985dd44aeb
-
-2012-11-04 08:46:05,047 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-clearing the cookie...
-
-2012-11-04 08:46:10,718 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:53:43,551 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:53:43,561 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:53:43,562 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:53:43,562 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:53:43,578 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-pwdField: [B@5b3a35a5,JJBYu
-
-2012-11-04 08:53:43,579 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-salt: JJBYu
-
-2012-11-04 08:53:43,579 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: aaa salt: JJBYu
-
-2012-11-04 08:53:43,579 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:54:10,615 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-pwdField: [B@5b3a35a5,JJBYu
-
-2012-11-04 08:54:10,615 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-salt: JJBYu
-
-2012-11-04 08:54:10,616 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: asddf salt: JJBYu
-
-2012-11-04 08:54:10,617 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:58:35,752 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 08:58:35,760 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 08:58:35,761 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 08:58:35,761 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 08:58:35,778 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-pwdField: [B@5b3a35a5,JJBYu
-
-2012-11-04 08:58:35,778 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-validateLogin. password: aaa salt: JJBYu
-
-2012-11-04 08:58:35,778 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: aaa salt: JJBYu
-
-2012-11-04 08:58:35,779 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-newPsdHash: [B@7b9852b0,JJBYu
-
-2012-11-04 08:58:35,779 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 08:59:50,831 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: asdf salt: kgEtd
-
-2012-11-04 08:59:50,833 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: asdf
-
-2012-11-04 08:59:50,834 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: asdf
-
-2012-11-04 08:59:50,834 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-SessionId: 50969f0692b23f985dd44aec
-
-2012-11-04 08:59:50,835 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 50969f0692b23f985dd44aec|ffqLsMD8Ve6V00vYwNACO60nPaU=
-
-2012-11-04 08:59:50,881 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 50969f0692b23f985dd44aec|ffqLsMD8Ve6V00vYwNACO60nPaU=
-
-2012-11-04 08:59:50,881 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969f0692b23f985dd44aec
-
-2012-11-04 08:59:50,882 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-getSession.sessionId50969f0692b23f985dd44aec
-
-2012-11-04 08:59:50,883 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-retrieved session: { "_id" : { "$oid" : "50969f0692b23f985dd44aec"} , "username" : "asdf"}
-
-2012-11-04 08:59:50,883 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-username: asdf
-
-2012-11-04 09:01:15,461 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 50969f0692b23f985dd44aec
-
-2012-11-04 09:01:15,464 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-ended session : 50969f0692b23f985dd44aec
-
-2012-11-04 09:01:15,465 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-clearing the cookie...
-
-2012-11-04 09:01:25,969 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-pwdField: [B@52982d9e,kgEtd
-
-2012-11-04 09:01:25,969 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-validateLogin. password: asdf salt: kgEtd
-
-2012-11-04 09:01:25,970 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: asdf salt: kgEtd
-
-2012-11-04 09:01:25,971 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-newPsdHash: [B@e2b91d,kgEtd
-
-2012-11-04 09:01:25,972 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 09:16:52,448 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Application shutdown...
-
-2012-11-04 09:16:52,456 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connecting to mongo db...
-
-2012-11-04 09:16:52,457 - [INFO] - from application in play-akka.actor.default-dispatcher-1 
-Connected to MongoDB dellr2970g:27520
-
-2012-11-04 09:16:52,457 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
-2012-11-04 09:17:06,594 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: aaa salt: CsFTL
-
-2012-11-04 09:17:06,595 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-hex: 4f8f6a502083378bf29b648853b9361f4dc83f5b34ec63fb9d48caf472c3af8
-
-2012-11-04 09:17:06,599 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new user: goran
-
-2012-11-04 09:17:06,600 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: goran
-
-2012-11-04 09:17:06,600 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-SessionId: 5096a31292b23f985dd44aed
-
-2012-11-04 09:17:06,601 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Setting cookie: 5096a31292b23f985dd44aed|en4baPmzkb7lkxVAdFtvJgKNglI=
-
-2012-11-04 09:17:06,616 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 5096a31292b23f985dd44aed|en4baPmzkb7lkxVAdFtvJgKNglI=
-
-2012-11-04 09:17:06,617 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 5096a31292b23f985dd44aed
-
-2012-11-04 09:17:06,617 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-getSession.sessionId5096a31292b23f985dd44aed
-
-2012-11-04 09:17:06,618 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-retrieved session: { "_id" : { "$oid" : "5096a31292b23f985dd44aed"} , "username" : "goran"}
-
-2012-11-04 09:17:06,619 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-username: goran
-
-2012-11-04 09:17:25,675 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 5096a31292b23f985dd44aed
-
-2012-11-04 09:17:25,679 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-ended session : 5096a31292b23f985dd44aed
-
-2012-11-04 09:17:25,680 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-clearing the cookie...
-
-2012-11-04 09:17:31,694 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-pwdField: 4f8f6a502083378bf29b648853b9361f4dc83f5b34ec63fb9d48caf472c3af8,CsFTL
-
-2012-11-04 09:17:31,695 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-validateLogin. password: aaaa salt: CsFTL
-
-2012-11-04 09:17:31,695 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: aaaa salt: CsFTL
-
-2012-11-04 09:17:31,696 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-hex: 128bef2e4287e6a8bee225689202ae59bece3a7f3f441237ed07e86e31d6cd1
-
-2012-11-04 09:17:31,696 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-newPsdHash: 128bef2e4287e6a8bee225689202ae59bece3a7f3f441237ed07e86e31d6cd1,CsFTL
-
-2012-11-04 09:17:31,697 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-user password is not a match
-
-2012-11-04 09:17:38,197 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-pwdField: 4f8f6a502083378bf29b648853b9361f4dc83f5b34ec63fb9d48caf472c3af8,CsFTL
-
-2012-11-04 09:17:38,197 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-validateLogin. password: aaa salt: CsFTL
-
-2012-11-04 09:17:38,198 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-password: aaa salt: CsFTL
-
-2012-11-04 09:17:38,199 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-hex: 4f8f6a502083378bf29b648853b9361f4dc83f5b34ec63fb9d48caf472c3af8
-
-2012-11-04 09:17:38,199 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-newPsdHash: 4f8f6a502083378bf29b648853b9361f4dc83f5b34ec63fb9d48caf472c3af8,CsFTL
-
-2012-11-04 09:17:38,201 - [INFO] - from application in play-akka.actor.actions-dispatcher-7 
-Created new session for user: goran
-
-2012-11-04 09:17:38,216 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-Cookie: 5096a33292b23f985dd44aee|2RGCsXszcZKVXDUYCUvEupXwfD0=
-
-2012-11-04 09:17:38,216 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-val= 5096a33292b23f985dd44aee
-
-2012-11-04 09:17:38,216 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-getSession.sessionId5096a33292b23f985dd44aee
-
-2012-11-04 09:17:38,218 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-retrieved session: { "_id" : { "$oid" : "5096a33292b23f985dd44aee"} , "username" : "goran"}
-
-2012-11-04 09:17:38,218 - [DEBUG] - from application in play-akka.actor.actions-dispatcher-7 
-username: goran
+2012-11-04 13:08:55,453 - [INFO] - from application in play-akka.actor.actions-dispatcher-6 
+Created new session for user: RQiIzpF
 
