@@ -43,6 +43,7 @@ public class Users {
             throw new RuntimeException("Invalid MessageDigest algotithm", ex);
         }
     }
+    
     private static final String USER_RE = "^[a-zA-Z0-9_-]{3,20}$";
     private static final String PASS_RE = "^.{3,20}$";
     private static final String EMAIL_RE = "^[\\S]+@[\\S]+\\.[\\S]+$";

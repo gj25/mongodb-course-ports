@@ -10,6 +10,6 @@ public class SimpleTest {
         System.out.println(" pwd, salt: " + Users.makePwHash("pwd", "salt"));
         System.out.println(" pwd, salt: " + Users.makePwHash("pwd", "salt"));
         
-        System.out.println(" pwd1,null 1: " + Users.makePwHash("pwd1", null));        
+        System.out.println(" pwd1,null: " + Users.makePwHash("pwd1", null));        
     }
 }

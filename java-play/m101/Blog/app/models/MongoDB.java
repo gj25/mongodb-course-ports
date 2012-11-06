@@ -2,7 +2,6 @@ package models;
 
 import com.mongodb.DBCollection;
 import com.mongodb.Mongo;
-import com.mongodb.MongoException;
 import java.net.UnknownHostException;
 import play.Logger;
 
