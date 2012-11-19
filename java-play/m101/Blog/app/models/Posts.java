@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
 import com.mongodb.BasicDBObject;
@@ -15,10 +11,6 @@ import java.util.List;
 import models.PostData.Comment;
 import play.Logger;
 
-/**
- *
- * @author CAGOJOV
- */
 public class Posts {
 
     public List<PostData> getPosts() {

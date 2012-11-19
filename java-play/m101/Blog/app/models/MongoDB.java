@@ -5,8 +5,8 @@ import com.mongodb.Mongo;
 import java.net.UnknownHostException;
 import play.Logger;
 
-public class MongoDB {
-
+public class MongoDB 
+{
     private static Mongo mongo = null;
 
     private MongoDB() {
