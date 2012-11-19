@@ -30,6 +30,7 @@ public class Application extends Controller {
     
     public static Result showPost(String permalink) {
         String username = checkLogin(request());
+// Homework validation fails if this is included
 //        if (username == null) {
 //            return redirect("/login");
 //        } 
