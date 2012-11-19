@@ -86,7 +86,7 @@ public class Users {
         // ***
 
         if (user == null) {
-            Logger.info("User not in database");
+            Logger.info("User not in database: " + username);
             return false;
         }
 

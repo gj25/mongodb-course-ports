@@ -22,5 +22,5 @@ public class Global extends GlobalSettings
   public Result onError(Http.RequestHeader rh, Throwable t) {
       Logger.error("Internal Server Error", t);
       return internalServerError(error_template.render(t.getMessage()));
-  } 
+  }
 }

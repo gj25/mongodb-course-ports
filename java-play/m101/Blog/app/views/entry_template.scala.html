@@ -1,0 +1,49 @@
+@(username: String)(post: models.PostData)(errors: String)(comment: models.PostData.Comment)
+<!doctype HTML>
+<html
+<head>
+<title>
+Blog Post
+</title>
+</head>
+<body>
+Welcome @username        <a href="/logout">Logout</a>
+
+<a href="/">Blog Home</a><br><br>
+
+<h2>@post.getTitle</h2>
+Posted @post.getPostDateStr<i> By @post.getAuthor</i><br>
+<hr>
+@post.getBody
+<p>
+<em>Filed Under</em>:
+@if(post.getTags != null) {
+    @post.getTags.map { tag =>
+        @tag 
+    }
+}
+<p>
+Comments: 
+<ul>
+@if(post.getComments != null) {
+    @post.getComments.map { aComment =>
+        Author: @aComment.getAuthor<br>
+        @aComment.getBody<br>
+    }
+<hr>
+}
+<h3>Add a comment</h3>
+<form action="/newcomment" method="POST">
+<input type="hidden" name="permalink" value="@post.getPermalink">
+@errors
+<b>Name</b> (required)<br>
+<input type="text" name="commentName" size="60" value="@comment.getAuthor"><br>
+<b>Email</b> (optional)<br>
+<input type="text" name="commentEmail" size="60" value="@comment.getEmail"><br>
+<b>Comment</b><br>
+<textarea name="commentBody" cols="60" rows="10">@comment.getBody</textarea><br>
+<input type="submit" value="Submit">
+</ul>
+</body>
+</html>
+
