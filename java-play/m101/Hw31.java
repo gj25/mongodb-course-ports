@@ -17,7 +17,7 @@ public class Hw31 {
                 {
                     DBObject student = cursor.next();
                     List<DBObject> scores = (List<DBObject>) student.get("scores");
-                    double minscore = 100000;
+                    double minscore = Double.MAX_VALUE;
                     for(DBObject scoreDb: scores)
                     {
                         String type = (String) scoreDb.get("type");
