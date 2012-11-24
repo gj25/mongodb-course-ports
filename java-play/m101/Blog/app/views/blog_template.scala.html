@@ -22,7 +22,7 @@ Posted @post.getPostDateStr <i>By @post.getAuthor</i><br>
 <em>Filed Under</em>: 
 @if(post.getTags != null) {
     @post.getTags.map { tag =>
-        @tag 
+<a href="/tag/@tag">@tag</a>&nbsp;
     }
 }
 

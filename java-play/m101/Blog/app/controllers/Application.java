@@ -28,6 +28,17 @@ public class Application extends Controller {
         return ok(blog_template.render(username, posts));
     }
     
+    public static Result postsByTag(String tag) {
+        String username = checkLogin(request());
+        if (username == null) {
+            return redirect("/login");
+        }
+        
+        Posts postMgr = new Posts();
+        List<PostData> posts = postMgr.getPostsByTag(tag);
+        return ok(blog_template.render(username, posts));
+    } 
+    
     public static Result showPost(String permalink) {
         String username = checkLogin(request());
 // Homework validation fails if this is included
@@ -238,7 +249,7 @@ public class Application extends Controller {
     private static List<String> extractTags(String tags)
     {
         String tagsNoWhite = tags.replaceAll("\\s", "");
-        return new ArrayList(Arrays.asList(tagsNoWhite.split(",")));
+        return new ArrayList<String>(Arrays.asList(tagsNoWhite.split(",")));
     }
     
 //    private static String replaceNewLines(String input)

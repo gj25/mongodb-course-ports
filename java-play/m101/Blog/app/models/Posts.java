@@ -14,11 +14,31 @@ import play.Logger;
 public class Posts {
 
     public List<PostData> getPosts() {
-        List<PostData> posts = new ArrayList();
+        List<PostData> posts = new ArrayList<>();
         DBCollection postsColl = MongoDB.getCollection("posts");
         DBObject sort = new BasicDBObject();
-        sort.put("date", 1);
+        sort.put("date", -1);
         DBCursor cursor = postsColl.find().sort(sort).limit(10);
+        try {
+            while (cursor.hasNext()) {
+                PostData post = Posts.dbPostToObj(cursor.next());
+                posts.add(post);
+            }
+        }
+        finally {
+            cursor.close();
+        }
+        return posts;
+    }
+    
+    public List<PostData> getPostsByTag(String tag) {
+        List<PostData> posts = new ArrayList<>();
+        DBCollection postsColl = MongoDB.getCollection("posts");
+        DBObject query = new BasicDBObject();
+        query.put("tags", tag);
+        DBObject sort = new BasicDBObject();
+        sort.put("date", -1);
+        DBCursor cursor = postsColl.find(query).sort(sort).limit(10);
         try {
             while (cursor.hasNext()) {
                 PostData post = Posts.dbPostToObj(cursor.next());
@@ -57,7 +77,7 @@ public class Posts {
         post.setTags((List<String>) dbPost.get("tags"));
         List<DBObject> dbComments = (List<DBObject>) dbPost.get("comments");
         if (dbComments != null) {
-            List<PostData.Comment> comments = new ArrayList();
+            List<PostData.Comment> comments = new ArrayList<>();
             for (DBObject dbComment : dbComments) {
                 PostData.Comment comment = new PostData.Comment();
                 comment.setAuthor((String) dbComment.get("author"));
@@ -103,5 +123,4 @@ public class Posts {
         
         return permalink;
     }
-
 }
