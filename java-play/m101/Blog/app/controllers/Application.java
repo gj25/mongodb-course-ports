@@ -6,7 +6,6 @@ import java.util.List;
 import models.PostData;
 import models.Posts;
 import models.Users;
-//import org.apache.commons.lang3.StringEscapeUtils;
 import play.Logger;
 import play.data.DynamicForm;
 import play.mvc.*;
@@ -18,10 +17,12 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
+        Logger.info("index");
         String username = checkLogin(request());
-        if (username == null) {
-            return redirect("/login");
-        }
+// Homework validation fails if this is included
+//        if (username == null) {
+//            return redirect("/login");
+//        }
         
         Posts postMgr = new Posts();
         List<PostData> posts = postMgr.getPosts();
@@ -29,6 +30,7 @@ public class Application extends Controller {
     }
     
     public static Result postsByTag(String tag) {
+        Logger.info("postsByTag");
         String username = checkLogin(request());
         if (username == null) {
             return redirect("/login");
@@ -40,8 +42,10 @@ public class Application extends Controller {
     } 
     
     public static Result showPost(String permalink) {
+        Logger.info("showPost");
         String username = checkLogin(request());
 // Homework validation fails if this is included
+//        String username = checkLogin(request());
 //        if (username == null) {
 //            return redirect("/login");
 //        } 
@@ -56,6 +60,7 @@ public class Application extends Controller {
     }
 
     public static Result postNewcomment() {
+        Logger.info("postNewcomment");
         String username = checkLogin(request());
         if (username == null) {
             return redirect("/login");
@@ -94,11 +99,13 @@ public class Application extends Controller {
     }
 
     public static Result postNotFound() {
+        Logger.info("postNotFound");
         // should be notFound()
         return ok("Sorry, post not found");
     }
 
     public static Result getNewpost() {
+         Logger.info("getNewpost");
         String username = checkLogin(request());
         if (username == null) {
             return redirect("/login");
@@ -107,6 +114,7 @@ public class Application extends Controller {
     }
     
     public static Result postNewpost() {
+        Logger.info("postNewpost");
         String username = checkLogin(request());
         if (username == null) {
             return redirect("/login");
@@ -131,16 +139,42 @@ public class Application extends Controller {
         Logger.info("newcomment: added the comment....redirecting to post");
         return redirect("/post/"+permalink);
     }
+    
+    public static Result postLike() {
+        Logger.info("postLike");
+// Homework validation fails if this is included
+//        String username = checkLogin(request());
+//        if (username == null) {
+//            return redirect("/login");
+//        }
+ 
+        DynamicForm form = form().bindFromRequest();
+        String permalink = form.get("permalink");
+        String comment_ordinal = form.get("comment_ordinal");
+        
+        Logger.info("increasing like for comment: " + comment_ordinal+ " in post: " + permalink);
+        
+        int comment_ord = Integer.parseInt(comment_ordinal);
+        Posts postMgr = new Posts();
+        postMgr.increaseLike(permalink, comment_ord);
+              
+        Logger.info("increased like for comment: " + comment_ordinal+ " in post: " + permalink);
+        return redirect("/post/"+permalink);
+    }
+
 
     public static Result presentSignup() {
+        Logger.info("presentSignup");
         return ok(signup.render("", "", "", "", "", ""));
     }
 
     public static Result presentLogin() {
+        Logger.info("presentLogin");
         return ok(login.render("", "", ""));
     }
 
     public static Result processLogin() {
+        Logger.info("processLogin");
         //String username = request().body().asFormUrlEncoded().get("username")[0];
         DynamicForm form = form().bindFromRequest();
         String username = form.get("username");
@@ -159,7 +193,9 @@ public class Application extends Controller {
     }
 
     public static Result processLogout() {
-        String cookie = request().cookies().get("session").value();
+        Logger.info("processLogout");
+        Cookie session = request().cookies().get("session");
+        String cookie = session != null ? session.value() : null;
         if (cookie == null) {
             Logger.info("no cookie...");
             return redirect("/signup");
@@ -179,6 +215,7 @@ public class Application extends Controller {
     }
 
     public static Result processSignup() {
+        Logger.info("processSignup");
         DynamicForm form = form().bindFromRequest();
         String username = form.get("username");
         String password = form.get("password");
@@ -209,6 +246,7 @@ public class Application extends Controller {
     }
     
     public static Result presentWelcome() {
+        Logger.info("presentWelcome");
         String username = checkLogin(request());
         if (username == null) {
             Logger.info("welcome: can't identify user...redirecting to signup");

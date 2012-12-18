@@ -82,6 +82,7 @@ public class Posts {
                 PostData.Comment comment = new PostData.Comment();
                 comment.setAuthor((String) dbComment.get("author"));
                 comment.setBody((String) dbComment.get("body"));
+                comment.setNumLikes((Integer) dbComment.get("num_likes"));
                 comments.add(comment);
             }
             post.setComments(comments);
@@ -100,6 +101,7 @@ public class Posts {
             dbComment.put("email", comment.getEmail());
         }
         dbComment.put("body", comment.getBody());
+        dbComment.put("num_likes", 0);
         
         BasicDBObject updateCommand = new BasicDBObject();
         updateCommand.put( "$push", new BasicDBObject( "comments", dbComment ) );
@@ -118,9 +120,23 @@ public class Posts {
         doc.put("permalink", permalink);
         doc.put("date", new Date());
         doc.put("tags", tagList);
+        doc.put("comments", new ArrayList<String>());
         DBCollection postsColl = MongoDB.getCollection("posts");
         postsColl.insert(doc, WriteConcern.SAFE);
         
         return permalink;
+    }
+
+    public void increaseLike(String permalink, int comment_ord) {
+        DBCollection postsColl = MongoDB.getCollection("posts");
+        DBObject query = new BasicDBObject();
+        query.put("permalink", permalink);
+        
+        String lookup = "comments." + comment_ord + ".num_likes";
+        
+        BasicDBObject updateCommand = new BasicDBObject();
+        updateCommand.put( "$inc", new BasicDBObject( lookup, 1 ) );
+        
+        postsColl.update(query, updateCommand);
     }
 }

@@ -81,6 +81,7 @@ public class PostData {
         private String email;        
         private String author;
         private String body;
+        private int numLikes;
 
         public String getEmail() {
             return email;
@@ -104,6 +105,14 @@ public class PostData {
 
         public void setBody(String body) {
             this.body = body;
+        }
+
+        public int getNumLikes() {
+            return numLikes;
+        }
+
+        public void setNumLikes(Integer numLikes) {
+            this.numLikes = numLikes != null ? numLikes : 0;
         }
     }
 }

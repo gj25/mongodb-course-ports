@@ -26,9 +26,15 @@ Posted @post.getPostDateStr<i> By @post.getAuthor</i><br>
 Comments: 
 <ul>
 @if(post.getComments != null) {
-    @post.getComments.map { aComment =>
+    @for((aComment, i) <- post.getComments.zipWithIndex) {
+    <form action="/like" method="POST">
         Author: @aComment.getAuthor<br>
         @aComment.getBody<br>
+        <input type="hidden" name="permalink" value="@post.getPermalink">
+        <input type="hidden" name="comment_ordinal" value="@i">
+        Likes: @aComment.getNumLikes
+        <input type="submit" value="Like">
+    </form><br>
     }
 <hr>
 }
